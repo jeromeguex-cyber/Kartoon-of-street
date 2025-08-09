@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kartoon of Street</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #111;
+      color: #fff;
+      overflow: hidden;
+    }
+    #splash {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.imgur.com/yourLogo.png') center center no-repeat;
+      background-size: contain;
+      animation: fadeOut 3s ease-in-out forwards;
+    }
+    @keyframes fadeOut {
+      0% {opacity: 1;}
+      100% {opacity: 0; visibility: hidden;}
+    }
+    #main {
+      display: none;
+      padding: 20px;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .tiktok-embed {
+      margin: 30px auto;
+      max-width: 325px;
+    }
+  </style>
+</head>
+<body>
+  <div id="splash"></div>
+  <div id="main">
+    <h1>Kartoon of Street</h1>
+    <p style="text-align:center;">L'art urbain en mouvement</p>
+
+    <!-- TikTok Embed -->
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@cacartoon_rl/video/7281234567890" data-video-id="7281234567890" style="max-width: 325px;min-width: 325px;" >
+      <section>Loading TikTok...</section>
+    </blockquote>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('splash').style.display = 'none';
+      document.getElementById('main').style.display = 'block';
+    }, 3000);
+  </script>
+</body>
+</html>
